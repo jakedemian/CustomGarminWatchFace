@@ -1,0 +1,14 @@
+info face="Roboto-VF-w100-t3" size=175 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=127 base=127 scaleW=755 scaleH=131 pages=1 packed=0 alphaChnl=0 redChnl=4 greenChnl=4 blueChnl=4
+page id=0 file="time_minutes.png"
+chars count=10
+char id=48 x=2 y=2 width=74 height=127 xoffset=0 yoffset=0 xadvance=78 page=0 chnl=15
+char id=49 x=78 y=2 width=40 height=124 xoffset=0 yoffset=2 xadvance=44 page=0 chnl=15
+char id=50 x=120 y=2 width=77 height=126 xoffset=0 yoffset=0 xadvance=81 page=0 chnl=15
+char id=51 x=199 y=2 width=76 height=127 xoffset=0 yoffset=0 xadvance=80 page=0 chnl=15
+char id=52 x=277 y=2 width=86 height=124 xoffset=0 yoffset=2 xadvance=90 page=0 chnl=15
+char id=53 x=365 y=2 width=72 height=125 xoffset=0 yoffset=2 xadvance=76 page=0 chnl=15
+char id=54 x=439 y=2 width=75 height=125 xoffset=0 yoffset=2 xadvance=79 page=0 chnl=15
+char id=55 x=516 y=2 width=79 height=124 xoffset=0 yoffset=2 xadvance=83 page=0 chnl=15
+char id=56 x=597 y=2 width=79 height=127 xoffset=0 yoffset=0 xadvance=83 page=0 chnl=15
+char id=57 x=678 y=2 width=75 height=126 xoffset=0 yoffset=0 xadvance=79 page=0 chnl=15

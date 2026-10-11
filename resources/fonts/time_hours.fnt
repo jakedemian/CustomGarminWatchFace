@@ -1,0 +1,14 @@
+info face="Roboto-VF-w400-t0" size=175 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0
+common lineHeight=128 base=128 scaleW=807 scaleH=132 pages=1 packed=0 alphaChnl=0 redChnl=4 greenChnl=4 blueChnl=4
+page id=0 file="time_hours.png"
+chars count=10
+char id=48 x=2 y=2 width=80 height=128 xoffset=0 yoffset=0 xadvance=84 page=0 chnl=15
+char id=49 x=84 y=2 width=49 height=124 xoffset=0 yoffset=2 xadvance=53 page=0 chnl=15
+char id=50 x=135 y=2 width=84 height=126 xoffset=0 yoffset=0 xadvance=88 page=0 chnl=15
+char id=51 x=221 y=2 width=79 height=128 xoffset=0 yoffset=0 xadvance=83 page=0 chnl=15
+char id=52 x=302 y=2 width=91 height=124 xoffset=0 yoffset=2 xadvance=95 page=0 chnl=15
+char id=53 x=395 y=2 width=79 height=126 xoffset=0 yoffset=2 xadvance=83 page=0 chnl=15
+char id=54 x=476 y=2 width=79 height=126 xoffset=0 yoffset=2 xadvance=83 page=0 chnl=15
+char id=55 x=557 y=2 width=85 height=124 xoffset=0 yoffset=2 xadvance=89 page=0 chnl=15
+char id=56 x=644 y=2 width=80 height=128 xoffset=0 yoffset=0 xadvance=84 page=0 chnl=15
+char id=57 x=726 y=2 width=79 height=126 xoffset=0 yoffset=0 xadvance=83 page=0 chnl=15
