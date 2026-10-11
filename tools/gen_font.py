@@ -50,12 +50,13 @@ def main():
     glyphs = [(c, img, t - top) for c, (img, t) in inked.items()]
 
     atlas_w = sum(g[1].width + PAD for g in glyphs) + PAD
-    atlas = Image.new("RGBA", (atlas_w, line_h + 2 * PAD), (255, 255, 255, 0))
+    # Coverage goes in RGB brightness on opaque black. The Connect IQ font compiler
+    # (GarminFontObject.convertToNBit) ignores alpha and quantizes HSB brightness, so
+    # white-with-alpha glyphs come out fully aliased.
+    atlas = Image.new("RGB", (atlas_w, line_h + 2 * PAD), (0, 0, 0))
     lines, x = [], PAD
     for c, img, yoff in glyphs:
-        white = Image.new("RGBA", img.size, (255, 255, 255, 255))
-        white.putalpha(img)
-        atlas.paste(white, (x, PAD))
+        atlas.paste(img.convert("RGB"), (x, PAD))
         lines.append(
             f"char id={ord(c)} x={x} y={PAD} width={img.width} height={img.height} "
             f"xoffset=0 yoffset={yoff} xadvance={img.width + tracking} page=0 chnl=15"
@@ -68,7 +69,7 @@ def main():
         f'info face="{Path(ttf).stem}-w{weight}-t{thin}" size={size} bold=0 italic=0 charset="" '
         f"unicode=1 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=1,1 outline=0",
         f"common lineHeight={line_h} base={line_h} scaleW={atlas.width} scaleH={atlas.height} "
-        f"pages=1 packed=0 alphaChnl=0 redChnl=4 greenChnl=4 blueChnl=4",
+        f"pages=1 packed=0 alphaChnl=4 redChnl=0 greenChnl=0 blueChnl=0",
         f'page id=0 file="{out.with_suffix(".png").name}"',
         f"chars count={len(lines)}",
     ]

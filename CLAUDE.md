@@ -60,6 +60,7 @@ Always-on (low-power) mode:
   The exact current arguments are in the comment in `resources/fonts/fonts.xml`. Hours and minutes must use the same px size.
 - The generator normalizes metrics: `xoffset=0`, `xadvance = ink width + tracking`, and line height = digit height. That's what makes ink-centering and `TEXT_JUSTIFY_VCENTER` exact. If you change `tracking`, update `TIME_TRACKING` in the view to match.
 - `thin` goes below Roboto's lightest weight. It renders at 4×, erodes N supersampled pixels per side, then downsamples. Each step is about 0.5px thinner.
+- **The font PNG must store coverage as RGB brightness on opaque black, not as white plus alpha.** The compiler's `GarminFontObject.convertToNBit` (in `monkeybrains.jar`) builds `new Color(rgb)`, which ignores alpha, and quantizes the HSB brightness. White-with-alpha glyphs therefore compile fully aliased even with `antialias="true"`.
 - Pillow 9.4's `getbbox` returns advance width rather than ink for some glyphs (the "1" came out as wide as the "0"). That's why the generator crops from rendered pixels instead.
 - `FONT_XTINY` is the smallest built-in font (about 31px). For anything smaller, or for in-between sizes, use `Graphics.getVectorFont({:face => "RobotoRegular", :size => px})` with a built-in fallback. Faces available on fr970: RobotoRegular, RobotoItalic, RobotoCondensedRegular, RobotoCondensedBold, and some non-Latin faces. There's no thin system font.
 
